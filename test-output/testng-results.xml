@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-09T16:53:42Z" name="Default suite" finished-at="2025-02-09T16:55:07Z" duration-ms="84776">
+    <groups>
+    </groups>
+    <test started-at="2025-02-09T16:53:42Z" name="Default test" finished-at="2025-02-09T16:55:07Z" duration-ms="84776">
+      <class name="com.TestNG.TestNGRunner">
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:53:42Z" name="launchURL" finished-at="2025-02-09T16:53:48Z" duration-ms="6058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:53:48Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:53:55Z" duration-ms="6575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shayee]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Karthick]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:53:55Z" name="teardown" finished-at="2025-02-09T16:53:55Z" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:53:55Z" name="launchURL" finished-at="2025-02-09T16:54:01Z" duration-ms="5919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:01Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:54:07Z" duration-ms="6492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:07Z" name="teardown" finished-at="2025-02-09T16:54:11Z" duration-ms="4065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:11Z" name="launchURL" finished-at="2025-02-09T16:54:18Z" duration-ms="6298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:18Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:54:29Z" duration-ms="11574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:29Z" name="teardown" finished-at="2025-02-09T16:54:29Z" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:29Z" name="launchURL" finished-at="2025-02-09T16:54:35Z" duration-ms="5488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:35Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:54:41Z" duration-ms="6518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:41Z" name="teardown" finished-at="2025-02-09T16:54:41Z" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:41Z" name="launchURL" finished-at="2025-02-09T16:54:47Z" duration-ms="5997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:47Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:54:54Z" duration-ms="6459" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:54Z" name="teardown" finished-at="2025-02-09T16:54:54Z" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:54:54Z" name="launchURL" finished-at="2025-02-09T16:55:00Z" duration-ms="5754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="testRegPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:55:00Z" name="testRegPage" data-provider="getTestData" finished-at="2025-02-09T16:55:06Z" duration-ms="6560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc123abc123456789@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[dGVzdEAxMjM=]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestNG.TestNGRunner@630cb4a4]" started-at="2025-02-09T16:55:06Z" name="teardown" finished-at="2025-02-09T16:55:07Z" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.TestNG.TestNGRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
