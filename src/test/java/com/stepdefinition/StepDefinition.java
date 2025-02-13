@@ -34,7 +34,6 @@ public class StepDefinition extends DriverFactory {
 	@Given("User have launched the application")
 	public void user_have_launched_the_application() {
 
-		base.DBConnectivity();
 		String apptitile = driver().getTitle();
 		System.out.println(apptitile);
 	}
@@ -75,7 +74,7 @@ public class StepDefinition extends DriverFactory {
 	@Then("I validate the outcomes")
 	public void i_validate_the_outcomes() {
 
-		base.DBConnectivity();
+		
 		Assert.assertTrue(true);
 	}
 

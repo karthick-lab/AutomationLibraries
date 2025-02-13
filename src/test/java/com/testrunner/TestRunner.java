@@ -9,9 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src\\test\\resources",
 		glue={"com.stepdefinition","src\\test\\hooks\\com.hooks1"},
-		plugin="pretty",
+		plugin={"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"},
 		monochrome=true,
-		dryRun=true
+		dryRun=false
 		)
 
 public class TestRunner {
