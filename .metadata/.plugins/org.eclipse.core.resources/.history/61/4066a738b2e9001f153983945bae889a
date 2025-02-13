@@ -52,14 +52,12 @@ public class Base extends DriverFactory {
 		System.out.println("password: " + password);
 		return password;
 	}
+
 	
-	public void DBConnectivity()
+	public void DBConnection()
 	{
 		
 	}
-	
-	
-
 
 
 }

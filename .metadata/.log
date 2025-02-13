@@ -1717,3 +1717,265 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-02-13 07:57:01.411
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndex(IndexManager.java:498)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndexForUpdate(IndexManager.java:582)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexAllProject.execute(IndexAllProject.java:102)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:542)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 7 more
+
+!ENTRY org.eclipse.core.resources 4 2 2025-02-13 07:57:01.738
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.loadMetaIndexIfNeeded(IndexManager.java:1611)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getMetaIndex(IndexManager.java:1692)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:42)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:100)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:269)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:578)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:479)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:444)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:145)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1281)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:954)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:911)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.getCukeSteps(JavaStepDefinitionsProvider.java:127)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.findStepDefinitionsFromSupportedResource(JavaStepDefinitionsProvider.java:385)
+	at cucumber.eclipse.steps.integration.AbstractStepDefinitionsProvider.findStepDefinitions(AbstractStepDefinitionsProvider.java:22)
+	at cucumber.eclipse.editor.steps.UniversalStepDefinitionsProvider.findStepDefinitions(UniversalStepDefinitionsProvider.java:83)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:135)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:159)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.incrementalBuild(CucumberStepDefinitionsBuilder.java:94)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.build(CucumberStepDefinitionsBuilder.java:58)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 47 more
+
+!ENTRY org.eclipse.core.resources 4 75 2025-02-13 07:57:01.890
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 cucumber.eclipse.editor 4 75 2025-02-13 07:57:01.890
+!MESSAGE Errors running builder 'Cucumber step definitions builder' on project 'JavaSeleniumLibraries'.
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.loadMetaIndexIfNeeded(IndexManager.java:1611)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getMetaIndex(IndexManager.java:1692)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:42)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:100)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:269)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:578)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:479)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:444)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:145)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1281)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:954)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:911)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.getCukeSteps(JavaStepDefinitionsProvider.java:127)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.findStepDefinitionsFromSupportedResource(JavaStepDefinitionsProvider.java:385)
+	at cucumber.eclipse.steps.integration.AbstractStepDefinitionsProvider.findStepDefinitions(AbstractStepDefinitionsProvider.java:22)
+	at cucumber.eclipse.editor.steps.UniversalStepDefinitionsProvider.findStepDefinitions(UniversalStepDefinitionsProvider.java:83)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:135)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:159)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.incrementalBuild(CucumberStepDefinitionsBuilder.java:94)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.build(CucumberStepDefinitionsBuilder.java:58)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 47 more
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-02-13 07:58:30.296
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndex(IndexManager.java:498)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndexForUpdate(IndexManager.java:582)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexAllProject.execute(IndexAllProject.java:102)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:542)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 7 more
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-02-13 07:58:33.594
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndex(IndexManager.java:498)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getIndexForUpdate(IndexManager.java:582)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexAllProject.execute(IndexAllProject.java:102)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:542)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 7 more
+
+!ENTRY org.eclipse.core.resources 4 2 2025-02-13 07:58:33.788
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.loadMetaIndexIfNeeded(IndexManager.java:1611)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getMetaIndex(IndexManager.java:1692)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:42)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:100)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:269)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:578)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:479)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:444)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:145)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1281)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:954)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:911)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.getCukeSteps(JavaStepDefinitionsProvider.java:127)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.findStepDefinitionsFromSupportedResource(JavaStepDefinitionsProvider.java:385)
+	at cucumber.eclipse.steps.integration.AbstractStepDefinitionsProvider.findStepDefinitions(AbstractStepDefinitionsProvider.java:22)
+	at cucumber.eclipse.editor.steps.UniversalStepDefinitionsProvider.findStepDefinitions(UniversalStepDefinitionsProvider.java:83)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:135)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:159)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.incrementalBuild(CucumberStepDefinitionsBuilder.java:94)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.build(CucumberStepDefinitionsBuilder.java:58)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 47 more
+
+!ENTRY org.eclipse.core.resources 4 75 2025-02-13 07:58:33.945
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 cucumber.eclipse.editor 4 75 2025-02-13 07:58:33.945
+!MESSAGE Errors running builder 'Cucumber step definitions builder' on project 'JavaSeleniumLibraries'.
+!STACK 0
+java.lang.LinkageError: Error reading class bytes: org.eclipse.jdt.internal.core.util.SimpleWordSet
+	at org.eclipse.jdt.internal.core.index.MemoryIndex.<init>(MemoryIndex.java:33)
+	at org.eclipse.jdt.internal.core.index.Index.<init>(Index.java:118)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.loadMetaIndexIfNeeded(IndexManager.java:1611)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.getMetaIndex(IndexManager.java:1692)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:42)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:100)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:269)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:578)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:479)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:444)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:145)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1281)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:954)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:911)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.getCukeSteps(JavaStepDefinitionsProvider.java:127)
+	at cucumber.eclipse.steps.jdt.JavaStepDefinitionsProvider.findStepDefinitionsFromSupportedResource(JavaStepDefinitionsProvider.java:385)
+	at cucumber.eclipse.steps.integration.AbstractStepDefinitionsProvider.findStepDefinitions(AbstractStepDefinitionsProvider.java:22)
+	at cucumber.eclipse.editor.steps.UniversalStepDefinitionsProvider.findStepDefinitions(UniversalStepDefinitionsProvider.java:83)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:135)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder$CucumberStepDefinitionsBuildVisitor.visit(CucumberStepDefinitionsBuilder.java:159)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.incrementalBuild(CucumberStepDefinitionsBuilder.java:94)
+	at cucumber.eclipse.editor.builder.CucumberStepDefinitionsBuilder.build(CucumberStepDefinitionsBuilder.java:58)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: C:\Users\Welcome\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.jdt.core_3.39.0.v20240807-1632.jar
+	... 47 more
