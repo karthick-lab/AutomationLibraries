@@ -3,6 +3,7 @@ package com.stepdefinition;
 import org.testng.Assert;
 
 import com.base.Base;
+import com.driverfactory.DriverFactory;
 import com.pageobjectmodel.HomePage;
 import com.pageobjectmodel.LoginPage;
 import com.utilities.SeleniumUtilities;
@@ -13,7 +14,7 @@ import io.cucumber.java.en.When;
 public class LoginpageStepDefinition {
 	
 	HomePage homepage=new HomePage();
-	LoginPage loginpage=new LoginPage();
+	LoginPage loginpage=new LoginPage(DriverFactory.driver());
 	Base base=new Base();
 	SeleniumUtilities utils=new SeleniumUtilities();
 	

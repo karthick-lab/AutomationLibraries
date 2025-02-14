@@ -7,9 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src\\test\\resources",
-		glue={"com.stepdefinition","src\\test\\hooks\\com.hooks1"},
-		plugin={"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"},
+		features = "E:\\Workspace Selenium Libraries\\AutomationLibraries\\com.feature\\Login.feature",
+		glue={"com.stepdefinition","\\src\\test\\java\\com\\hooks"},
+		plugin={"pretty"},
 		monochrome=true,
 		dryRun=false
 		)
