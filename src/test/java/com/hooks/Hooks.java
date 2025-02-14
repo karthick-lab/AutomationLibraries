@@ -19,7 +19,7 @@ public class Hooks extends DriverFactory {
 	SeleniumUtilities utils;
 	public static String scenarioname;
 	
-	@BeforeMethod
+	@Before
 	
 	public void launchbrowser(Scenario scenario)
 	{

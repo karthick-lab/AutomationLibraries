@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import com.base.Base;
 import com.driverfactory.DriverFactory;
+import com.hooks.Hooks;
 import com.pageobjectmodel.HomePage;
 import com.pageobjectmodel.LoginPage;
 import com.utilities.SeleniumUtilities;
@@ -17,6 +18,10 @@ public class LoginpageStepDefinition extends DriverFactory {
 	LoginPage loginpage=new LoginPage();
 	Base base=new Base();
 	SeleniumUtilities utils=new SeleniumUtilities();
+	//Base base;
+	//SeleniumUtilities utils;
+	public static String scenarioname;
+	Hooks hooks=new Hooks();
 	
 	@When("I click on Login link")
 	public void i_click_on_Login_link() {
@@ -32,6 +37,7 @@ public class LoginpageStepDefinition extends DriverFactory {
 		loginpage.enterEmail(email);
 		loginpage.enterPasswod(password);
 		loginpage.clickLogin();
+		utils.takescreenshot((scenarioname)+scenarioname+base.getcurrentdatetime());
 		
 	}
 

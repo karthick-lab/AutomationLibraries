@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import com.base.Base;
 import com.config.ConfigProperties;
 import com.driverfactory.DriverFactory;
+import com.hooks.Hooks;
 import com.utilities.DataProviderUtility;
 import com.utilities.ExcelReader;
 import com.utilities.SeleniumUtilities;
@@ -22,6 +23,7 @@ import com.pageobjectmodel.HomePage;
 import com.pageobjectmodel.RegistrationPage;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -35,6 +37,7 @@ public class StepDefinition extends DriverFactory {
 	Base base;
 	SeleniumUtilities utils;
 	public static String scenarioname;
+	Hooks hooks=new Hooks();
 
 	@Given("User have launched the application")
 	public void user_have_launched_the_application() {
@@ -82,6 +85,7 @@ public class StepDefinition extends DriverFactory {
 			regpage.clickPrivacyPolicy();
 			regpage.clickContinueButton();
 			Thread.sleep(5000);
+			utils.takescreenshot((scenarioname)+scenarioname+base.getcurrentdatetime());
 		}
 		
 		
