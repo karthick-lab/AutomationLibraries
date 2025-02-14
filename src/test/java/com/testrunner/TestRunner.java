@@ -7,9 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "E:\\Workspace Selenium Libraries\\AutomationLibraries\\com.feature\\Login.feature",
+		features = {"src\\test\\resources\\Registration.feature",
+				"src\\test\\resources\\Login.feature"},
 		glue={"com.stepdefinition","\\src\\test\\java\\com\\hooks"},
-		plugin={"pretty"},
+		plugin={"pretty","html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt",
+                "json:target/cucumber-reports/CucumberTestReport.json"},
 		monochrome=true,
 		dryRun=false
 		)

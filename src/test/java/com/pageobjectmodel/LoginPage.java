@@ -9,10 +9,6 @@ import io.cucumber.java.en.When;
 
 public class LoginPage {
 	
-	WebDriver driver;
-	public LoginPage(WebDriver driver) {
-		this.driver=driver;
-	}
 
 	SeleniumUtilities utils=new SeleniumUtilities();
 	

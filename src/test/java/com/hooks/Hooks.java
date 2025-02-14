@@ -1,5 +1,8 @@
 package com.hooks;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 import com.base.Base;
 import com.config.ConfigProperties;
 import com.driverfactory.DriverFactory;
@@ -16,7 +19,7 @@ public class Hooks extends DriverFactory {
 	SeleniumUtilities utils;
 	public static String scenarioname;
 	
-	@Before
+	@BeforeMethod
 	
 	public void launchbrowser(Scenario scenario)
 	{

@@ -11,10 +11,10 @@ import com.utilities.SeleniumUtilities;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginpageStepDefinition {
+public class LoginpageStepDefinition extends DriverFactory {
 	
 	HomePage homepage=new HomePage();
-	LoginPage loginpage=new LoginPage(DriverFactory.driver());
+	LoginPage loginpage=new LoginPage();
 	Base base=new Base();
 	SeleniumUtilities utils=new SeleniumUtilities();
 	

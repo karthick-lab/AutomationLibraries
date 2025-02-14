@@ -17,6 +17,7 @@ import com.config.ConfigProperties;
 import com.driverfactory.DriverFactory;
 import com.utilities.DataProviderUtility;
 import com.utilities.ExcelReader;
+import com.utilities.SeleniumUtilities;
 import com.pageobjectmodel.HomePage;
 import com.pageobjectmodel.RegistrationPage;
 
@@ -26,13 +27,28 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StepDefinition extends DriverFactory {
-	Base base = new Base();
+	//Base base = new Base();
 	RegistrationPage regpage = new RegistrationPage();
 	HomePage homepage = new HomePage();
 	ExcelReader excel = new ExcelReader("Registration page.xls", "Registration details");
+	ConfigProperties properties;
+	Base base;
+	SeleniumUtilities utils;
+	public static String scenarioname;
 
 	@Given("User have launched the application")
 	public void user_have_launched_the_application() {
+		properties=new ConfigProperties();
+		initdriver(properties.getProperties("config.properties", "browser"));
+		base=new Base();
+		//maximize using java script executor -----> this is not working 
+		//base.maximizewindow();
+		//maximize using java
+		//driver().manage().window().setSize(base.getscreensize());
+		//usual method
+		utils= new SeleniumUtilities();
+		utils.maximizeWindow();
+		driver().get(properties.getProperties("config.properties", "url"));
 
 		String apptitile = driver().getTitle();
 		System.out.println(apptitile);
